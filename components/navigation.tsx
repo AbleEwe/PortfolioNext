@@ -38,6 +38,7 @@ export default function Navigation() {
         variant="ghost"
         className="fixed top-4 right-4 z-50 md:hidden"
         onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+        aria-label='Navigation button'
       >
         {mobileMenuOpen ? <X /> : <Menu />}
       </Button>

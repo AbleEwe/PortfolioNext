@@ -34,11 +34,11 @@ export default function Home() {
         animate="show"
       >
         <motion.div 
-          className="flex flex-col md:flex-row-reverse gap-8 items-start"
+          className="flex flex-col md:flex-row-reverse gap-8 md:items-start items-center"
           variants={itemVariants}
         >
           <motion.div 
-            className="hidden md:block flex-shrink-0"
+            className="flex flex-shrink-0"
             variants={itemVariants}
           >
             <Image 
@@ -73,14 +73,30 @@ export default function Home() {
               className="flex gap-4"
               variants={itemVariants}
             >
-              <Button variant="outline" size="icon" className="bg-primary text-white border-none">
+              <Button 
+                variant="outline" 
+                size="icon" 
+                className="bg-primary text-white border-none"
+                aria-label="GitHub profile"
+              >
                 <GithubIcon className="h-5 w-5" />
               </Button>
-              <Button variant="outline" size="icon" className="bg-primary text-white border-none">
+              <Button 
+                variant="outline" 
+                size="icon" 
+                className="bg-primary text-white border-none"
+                aria-label="LinkedIn profile"
+              >
                 <LinkedinIcon className="h-5 w-5" />
               </Button>
-              <a href="/Cv.pdf" target="_blank" className="bg-primary text-white border-none inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input hover:bg-accent hover:text-accent-foreground h-10 w-10">
-                <FileDown/>
+              <a 
+                href="/Cv.pdf" 
+                target="_blank" 
+                className="bg-primary text-white border-none inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input hover:bg-accent hover:text-accent-foreground h-10 w-10"
+                aria-label="Download CV"
+                download="YourName-CV.pdf"
+              >
+                <FileDown />
               </a>
             </motion.div>
           </motion.div>
