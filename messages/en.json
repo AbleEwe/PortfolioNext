@@ -1,0 +1,71 @@
+{
+  "LocaleSwitcher": {
+    "label": "English",
+    "es": "Español",
+    "en": "English"
+  },
+  "HomePage": {
+    "subitle": "Full Stack Developer passionate about building exceptional digital experiences",
+    "text1": "With over 2 years of experience in web development, I specialize in building scalable applications using modern technologies. I'm currently focused on creating accessible applications at Lola Sux.",
+    "Title1": "Background",
+    "description1": "Hi, I'm a self-taught developer with hands-on experience in full-stack app development, and client-facing projects. Now, I'm eager to apply my skills in a professional setting, collaborating on diverse tasks like backend, design, and cms management. I constantly like to explore new challenges where I can apply my knowledge",
+    "Title2": "Current Focus",
+    "description2": "I'm currently exploring new ways to improve web performance and accessibility while keeping up with the latest trends in web development."
+  },
+  "Navigation": {
+    "about": "About Me",
+    "experience": "Experience",
+    "projects": "Projects",
+    "skills": "Skills",
+    "contact": "Contact"
+  },
+  "Experience": {
+    "title": "Professional Experience",
+    "exp1": "Optimized e-commerce platforms (React, Next.js, Shopify) by reducing load times by 25–30%, resolving legacy code, and implementing caching strategies; migrated to Next.js for 40% higher SEO traffic, built full-stack apps (AWS, MongoDB) with 99.9% uptime, and delivered high-impact Shopify themes/extensions to boost UX and conversions—all under tight deadlines.",
+    "exp2": "Delivered responsive web apps and e-commerce solutions for clients, optimizing site performance by 20%+ through code refinements and Lighthouse audits. Assisted in app integrations to enhance UX, while meeting tight project deadlines with scalable results."
+  },
+  "Skills": {
+    "title": "Skills & Expertise",
+    "tools": "Tools",
+    "softSkills": "Soft Skills"
+  },
+  "Contact": {
+    "title": "Contact Me",
+    "subtitle": "Get in Touch",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send Message"
+  },
+  "Projects": {
+    "title": "Projects",
+    "codeButton": "Code",
+    "demoButton": "Demo",
+    "projects": {
+      "moviePlatform": {
+        "title": "Full-Stack Movie Streaming Platform",
+        "description": "Developed a full-stack movie streaming platform from scratch, implementing user authentication, a seamless Stripe checkout flow, and secure media storage via AWS S3."
+      },
+      "ecommerce": {
+        "title": "E-Commerce Platform Migration & Performance Overhaul",
+        "description": "I spearheaded the modernization of a legacy e-commerce platform, collaborating with backend and cloud teams to refactor inefficient code, migrate to a scalable architecture, and implement advanced caching."
+      },
+      "shopify": {
+        "title": "High-Traffic Shopify Store",
+        "description": "Launched a custom Shopify store for a high-growth brand, delivering the project under a tight deadline. The store scaled to over 28,000 registered users with active sales, and through strategic UX refinements"
+      },
+      "todoApp": {
+        "title": "Todo App",
+        "description": "A Todo list App implementing drag an drop, chatGPT and Zustand functionalities."
+      },
+      "weatherApp": {
+        "title": "Weather app",
+        "description": "Website that works as weather app created with React, Typescript and an open weather API"
+      },
+      "landingPage": {
+        "title": "React Landing page",
+        "description": "A Web App developed for a real client attending his needs and objectives using React"
+      }
+    }
+  }
+}

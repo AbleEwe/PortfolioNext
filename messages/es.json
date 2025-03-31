@@ -1,0 +1,71 @@
+{
+  "LocaleSwitcher": {
+    "label": "Inglés",
+    "es": "Español",
+    "en": "Inglés"
+  },
+  "HomePage": {
+    "subitle": "Desarrollador Full Stack apasionado por crear experiencias digitales excepcionales",
+    "text1": "Con más de 2 años de experiencia en desarrollo web, me especializo en construir aplicaciones escalables utilizando tecnologías modernas. Actualmente me enfoco en crear aplicaciones accesibles en Lola Sux.",
+    "Title1": "Antecedentes",
+    "description1": "Hola, soy un desarrollador autodidacta con experiencia práctica en desarrollo de aplicaciones full-stack y proyectos orientados al cliente. Ahora, estoy ansioso por aplicar mis habilidades en un entorno profesional, colaborando en diversas tareas como backend, diseño y gestión de CMS. Constantemente me gusta explorar nuevos desafíos donde pueda aplicar mis conocimientos.",
+    "Title2": "Enfoque Actual",
+    "description2": "Actualmente estoy explorando nuevas formas de mejorar el rendimiento y la accesibilidad web mientras me mantengo al día con las últimas tendencias en desarrollo web."
+  },
+  "Navigation": {
+    "about": "Sobre Mí",
+    "experience": "Experiencia",
+    "projects": "Proyectos",
+    "skills": "Habilidades",
+    "contact": "Contacto"
+  },
+  "Experience": {
+    "title": "Experiencia Profesional",
+    "exp1": "Optimicé plataformas de comercio electrónico (React, Next.js, Shopify) reduciendo los tiempos de carga en un 25-30%, resolviendo código heredado e implementando estrategias de caché; migré a Next.js para un tráfico SEO 40% mayor, construí aplicaciones full-stack (AWS, MongoDB) con un 99.9% de disponibilidad, y desarrollé temas/extensiones de Shopify de alto impacto para mejorar la UX y conversiones, todo bajo plazos ajustados.",
+    "exp2": "Entregué aplicaciones web responsivas y soluciones de comercio electrónico para clientes, optimizando el rendimiento del sitio en más de un 20% mediante refinamientos de código y auditorías Lighthouse. Asistí en integraciones de aplicaciones para mejorar la UX, cumpliendo con plazos ajustados y entregando resultados escalables."
+  },
+  "Skills": {
+    "title": "Habilidades y Experiencia",
+    "tools": "Herramientas",
+    "softSkills": "Habilidades Blandas"
+  },
+  "Contact": {
+    "title": "Contáctame",
+    "subtitle": "Ponte en Contacto",
+    "name": "Nombre",
+    "email": "Correo Electrónico",
+    "message": "Mensaje",
+    "send": "Enviar Mensaje"
+  },
+  "Projects": {
+    "title": "Proyectos",
+    "codeButton": "Código",
+    "demoButton": "Demo",
+    "projects": {
+      "moviePlatform": {
+        "title": "Plataforma de Streaming de Películas Full-Stack",
+        "description": "Desarrollé una plataforma de streaming de películas full-stack desde cero, implementando autenticación de usuarios, un flujo de pago con Stripe y almacenamiento seguro de medios mediante AWS S3."
+      },
+      "ecommerce": {
+        "title": "Migración de Plataforma E-Commerce y Reforma de Rendimiento",
+        "description": "Lideré la modernización de una plataforma de comercio electrónico heredada, colaborando con equipos de backend y cloud para refactorizar código ineficiente, migrar a una arquitectura escalable e implementar caché avanzado."
+      },
+      "shopify": {
+        "title": "Tienda Shopify de Alto Tráfico",
+        "description": "Lancé una tienda Shopify personalizada para una marca en crecimiento, entregando el proyecto bajo un plazo ajustado. La tienda escaló a más de 28,000 usuarios registrados con ventas activas, y mediante refinamientos estratégicos de UX."
+      },
+      "todoApp": {
+        "title": "Aplicación de Tareas",
+        "description": "Una aplicación de lista de tareas que implementa arrastrar y soltar, ChatGPT y funcionalidades con Zustand."
+      },
+      "weatherApp": {
+        "title": "Aplicación del Clima",
+        "description": "Sitio web que funciona como aplicación del clima creado con React, Typescript y una API de clima abierta."
+      },
+      "landingPage": {
+        "title": "Landing Page en React",
+        "description": "Una aplicación web desarrollada para un cliente real atendiendo sus necesidades y objetivos utilizando React."
+      }
+    }
+  }
+}

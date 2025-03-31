@@ -6,8 +6,11 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Mail, Phone, MapPin } from "lucide-react";
+import { AnimatedTitle } from "@/components/AnimatedTitle";
+import { useTranslations } from "next-intl";
 
 export default function ContactPage() {
+  const t = useTranslations("Contact")
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -50,14 +53,14 @@ export default function ContactPage() {
 
   return (
     <div className="container p-8 md:p-12">
-      <h1 className="text-4xl font-bold mb-8">Contact Me</h1>
+      <AnimatedTitle className="text-4xl font-bold mb-8" typing>{t("title")}</AnimatedTitle>
       
       <div className="flex flex-col-reverse gap-6">
         <Card className="p-6">
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
               <label htmlFor="name" className="block text-sm font-medium mb-2">
-                Name
+                {t("name")}
               </label>
               <Input
                 id="name"
@@ -69,7 +72,7 @@ export default function ContactPage() {
             
             <div>
               <label htmlFor="email" className="block text-sm font-medium mb-2">
-                Email
+                {t("email")}
               </label>
               <Input
                 id="email"
@@ -82,7 +85,7 @@ export default function ContactPage() {
             
             <div>
               <label htmlFor="message" className="block text-sm font-medium mb-2">
-                Message
+                {t("message")}
               </label>
               <Textarea
                 id="message"
@@ -108,7 +111,7 @@ export default function ContactPage() {
         </Card>
 
         <Card className="p-6">
-          <h2 className="text-2xl font-semibold mb-6 text-accent">Get in Touch</h2>
+          <h2 className="text-2xl font-semibold mb-6 text-accent">{t("subtitle")}</h2>
           
           <div className="space-y-4">
             <div className="flex items-center gap-3">

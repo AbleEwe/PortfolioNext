@@ -12,24 +12,25 @@ import {
   Briefcase,
   Code2,
   Wrench,
-  Info,
   Mail,
   Menu,
   X,
 } from 'lucide-react';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 
 const navigation = [
-  { name: 'About Me', href: '/', icon: User },
-  { name: 'Experience', href: '/experience', icon: Briefcase },
-  { name: 'Projects', href: '/projects', icon: Code2 },
-  { name: 'Skills', href: '/skills', icon: Wrench },
-  { name: 'Contact', href: '/contact', icon: Mail },
+  { key: 'about', href: '/', icon: User },
+  { key: 'experience', href: '/experience', icon: Briefcase },
+  { key: 'projects', href: '/projects', icon: Code2 },
+  { key: 'skills', href: '/skills', icon: Wrench },
+  { key: 'contact', href: '/contact', icon: Mail },
 ];
 
 export default function Navigation() {
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const t = useTranslations('Navigation');
 
   return (
     <>
@@ -61,18 +62,18 @@ export default function Navigation() {
               const isActive = pathname === item.href;
               return (
                 <Link
-                  key={item.name}
+                  key={item.key}
                   href={item.href}
                   className={cn(
                     "flex items-center px-3 py-2 text-sm font-medium rounded-md",
                     isActive
                       ? "bg-primary text-primary-foreground"
-                      : "hover:bg-primary hover:text-accent-foreground"
+                      : "hover:bg-primary hover:text-primary-foreground"
                   )}
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   <item.icon className="mr-3 h-5 w-5" />
-                  {item.name}
+                  {t(item.key)}
                 </Link>
               );
             })}
