@@ -13,18 +13,46 @@ export default function ContactPage() {
     email: "",
     message: ""
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<"success" | "error" | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log(formData);
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          to: 'diegosm25@outlook.com',
+          subject: `New message from ${formData.name}`,
+          text: `Name: ${formData.name}\nEmail: ${formData.email}\nMessage: ${formData.message}`,
+          replyTo: formData.email
+        }),
+      });
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        setSubmitStatus('error');
+      }
+    } catch (error) {
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
-    <div className="container py-8 md:py-12">
+    <div className="container p-8 md:p-12">
       <h1 className="text-4xl font-bold mb-8">Contact Me</h1>
       
-      <div className="grid gap-6 md:grid-cols-2">
+      <div className="flex flex-col-reverse gap-6">
         <Card className="p-6">
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
@@ -62,32 +90,40 @@ export default function ContactPage() {
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                 required
                 rows={6}
+                className="max-h-36 resize-none"
               />
             </div>
             
-            <Button type="submit" className="w-full">
-              Send Message
+            <Button type="submit" className="w-full" disabled={isSubmitting}>
+              {isSubmitting ? "Sending..." : "Send Message"}
             </Button>
+
+            {submitStatus === 'success' && (
+              <p className="text-green-500 text-center">Message sent successfully!</p>
+            )}
+            {submitStatus === 'error' && (
+              <p className="text-red-500 text-center">Failed to send message. Please try again.</p>
+            )}
           </form>
         </Card>
 
         <Card className="p-6">
-          <h2 className="text-2xl font-semibold mb-6">Get in Touch</h2>
+          <h2 className="text-2xl font-semibold mb-6 text-accent">Get in Touch</h2>
           
           <div className="space-y-4">
             <div className="flex items-center gap-3">
               <Mail className="h-5 w-5 text-muted-foreground" />
-              <p>john.doe@example.com</p>
+              <p>diegosm25@outlook.com</p>
             </div>
             
             <div className="flex items-center gap-3">
               <Phone className="h-5 w-5 text-muted-foreground" />
-              <p>+1 (555) 123-4567</p>
+              <p>+52 (33) 31 77 82 75</p>
             </div>
             
             <div className="flex items-center gap-3">
               <MapPin className="h-5 w-5 text-muted-foreground" />
-              <p>San Francisco, CA</p>
+              <p>Guadalajara, Jal. México</p>
             </div>
           </div>
         </Card>

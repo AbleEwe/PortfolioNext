@@ -33,10 +33,12 @@ const config: Config = {
         primary: {
           DEFAULT: 'hsl(var(--primary))',
           foreground: 'hsl(var(--primary-foreground))',
+          background: 'hsl(var(--secondary-smbg))',
         },
         secondary: {
           DEFAULT: 'hsl(var(--secondary))',
           foreground: 'hsl(var(--secondary-foreground))',
+          background: 'hsl(var(--secondary-background))',
         },
         muted: {
           DEFAULT: 'hsl(var(--muted))',

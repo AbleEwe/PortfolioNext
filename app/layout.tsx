@@ -22,7 +22,7 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="light">
           <div className="flex h-screen overflow-hidden">
             <Navigation />
-            <main className="flex-1 overflow-y-auto">
+            <main className="flex-1 overflow-y-auto px-0 md:px-32">
               {children}
             </main>
           </div>

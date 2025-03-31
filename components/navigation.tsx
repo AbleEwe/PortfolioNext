@@ -17,6 +17,7 @@ import {
   Menu,
   X,
 } from 'lucide-react';
+import Image from 'next/image';
 
 const navigation = [
   { name: 'About Me', href: '/', icon: User },
@@ -42,20 +43,20 @@ export default function Navigation() {
 
       <div
         className={cn(
-          "fixed inset-y-0 left-0 z-40 w-64 bg-background border-r transition-transform duration-200 ease-in-out md:translate-x-0 md:relative flex-shrink-0",
+          "fixed inset-y-0 left-0 z-40 w-64 bg-primary-background md:bg-secondary-background transition-transform duration-200 ease-in-out md:translate-x-0 md:relative flex-shrink-0 shadow-lg",
           mobileMenuOpen ? "translate-x-0" : "-translate-x-full"
         )}
       >
         <div className="flex flex-col h-full">
-          <div className="flex h-16 items-center justify-between px-6 border-b flex-shrink-0">
-            <h1 className="text-xl font-semibold">John Doe</h1>
+          <div className="flex h-16 items-center justify-between px-5 flex-shrink-0">
+            <h1 className="text-lg font-semibold">Diego Suárez</h1>
             <div className="flex items-center gap-2">
               <ThemeSwitcher />
               <LanguageSwitcher />
             </div>
           </div>
 
-          <nav className="flex-1 space-y-1 px-3 py-4 overflow-y-auto">
+          <nav className="flex-1 space-y-1 px-3 py-4 overflow-y-auto ">
             {navigation.map((item) => {
               const isActive = pathname === item.href;
               return (
@@ -66,7 +67,7 @@ export default function Navigation() {
                     "flex items-center px-3 py-2 text-sm font-medium rounded-md",
                     isActive
                       ? "bg-primary text-primary-foreground"
-                      : "text-muted-foreground hover:bg-accent hover:text-accent-foreground"
+                      : "hover:bg-primary hover:text-accent-foreground"
                   )}
                   onClick={() => setMobileMenuOpen(false)}
                 >
@@ -77,11 +78,17 @@ export default function Navigation() {
             })}
           </nav>
 
-          <div className="border-t p-4 flex-shrink-0">
+          <div className="p-4 flex-shrink-0">
             <div className="flex items-center gap-3">
-              <div className="h-10 w-10 rounded-full bg-muted" />
+              <Image 
+                src="/fotomia.jpg" 
+                alt='diego foto' 
+                width={40} 
+                height={40} 
+                className='rounded-full object-cover h-10 w-10'
+              />
               <div>
-                <p className="text-sm font-medium">John Doe</p>
+                <p className="text-sm font-medium text-accent">Diego Suárez</p>
                 <p className="text-xs text-muted-foreground">Full Stack Developer</p>
               </div>
             </div>

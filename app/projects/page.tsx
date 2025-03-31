@@ -4,34 +4,55 @@ import { ExternalLink, Github } from "lucide-react";
 
 const projects = [
   {
-    title: "E-commerce Platform",
-    description: "A full-featured e-commerce platform built with Next.js and Stripe integration.",
-    image: "https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&q=80&w=1000",
-    technologies: ["Next.js", "TypeScript", "Stripe", "Tailwind CSS"],
-    github: "https://github.com/johndoe/ecommerce",
-    demo: "https://ecommerce-demo.com"
+    title: "Full-Stack Movie Streaming Platform",
+    description: "Developed a full-stack movie streaming platform from scratch, implementing user authentication, a seamless Stripe checkout flow, and secure media storage via AWS S3.",
+    image: "/mqx.png",
+    technologies: ["Next.js", "TypeScript", "Stripe", "Tailwind CSS", "MongoDB", "Express"],
+    demo: "https://mqx.mx/"
   },
   {
-    title: "Task Management App",
-    description: "A collaborative task management application with real-time updates.",
-    image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80&w=1000",
-    technologies: ["React", "Node.js", "Socket.io", "MongoDB"],
-    github: "https://github.com/johndoe/taskmanager",
-    demo: "https://taskmanager-demo.com"
+    title: "E-Commerce Platform Migration & Performance Overhaul",
+    description: "I spearheaded the modernization of a legacy e-commerce platform, collaborating with backend and cloud teams to refactor inefficient code, migrate to a scalable architecture, and implement advanced caching.",
+    image: "/aida.png",
+    technologies: ["Next.js", "Typescript", "Google Cloud", "Node.js"],
+    demo: "https://soyaida.com/"
   },
   {
-    title: "Weather Dashboard",
-    description: "A weather dashboard with interactive maps and detailed forecasts.",
-    image: "https://images.unsplash.com/photo-1592210454359-9043f067919b?auto=format&fit=crop&q=80&w=1000",
-    technologies: ["Vue.js", "OpenWeather API", "D3.js"],
-    github: "https://github.com/johndoe/weather",
-    demo: "https://weather-demo.com"
-  }
+    title: "High-Traffic Shopify Store",
+    description: "Launched a custom Shopify store for a high-growth brand, delivering the project under a tight deadline. The store scaled to over 28,000 registered users with active sales, and through strategic UX refinements",
+    image: "entredijes.png",
+    technologies: ["Shopify", "Liquid"],
+    demo: "https://entredijes.mx/"
+  },
+  {
+    title: "Todo App",
+    description: "A Todo list App implementing drag an drop, chatGPT and Zustand functionalities.",
+    image: "/todoapp.png",
+    technologies: ["Next.js", "Typescript", "Tailwind", "Zustand"],
+    github: "https://github.com/AbleEwe/toDoApp",
+    demo: "https://to-do-sm-ds.vercel.app/"
+  },
+  {
+    title: "Weather app",
+    description: "Website that works as weather app created with React, Typescript and an open weather API",
+    image: "/weather.webp",
+    technologies: ["React", "CSS3", "Typescript"],
+    github: "https://github.com/AbleEwe/WeatherApp2",
+    demo: "https://weatherappdsm.netlify.app/"
+  },
+  {
+    title: "React Landing page",
+    description: "A Web App developed for a real client attending his needs and objectives using React",
+    image: "/landing.webp",
+    technologies: ["React", "CSS3", "Typescript"],
+    github: "https://github.com/AbleEwe/FrancescaSantosPortfolio",
+    demo: "https://francesca-santos.web.app/"
+  },
 ];
 
 export default function ProjectsPage() {
   return (
-    <div className="container py-8 md:py-12">
+    <div className="container p-8 md:p-12">
       <h1 className="text-4xl font-bold mb-8">Projects</h1>
       
       <div className="grid gap-6 md:grid-cols-2">
@@ -57,12 +78,17 @@ export default function ProjectsPage() {
               </div>
               
               <div className="flex gap-4">
-                <Button variant="outline" asChild>
-                  <a href={project.github} target="_blank" rel="noopener noreferrer">
-                    <Github className="mr-2 h-4 w-4" />
-                    Code
-                  </a>
-                </Button>
+                {project.github ? ( 
+                  <Button variant="outline" asChild>
+                    <a href={project.github} target="_blank" rel="noopener noreferrer">
+                      <Github className="mr-2 h-4 w-4" />
+                      Code
+                    </a>
+                  </Button>
+                  
+                ): (
+                  <></>
+                )}
                 <Button asChild>
                   <a href={project.demo} target="_blank" rel="noopener noreferrer">
                     <ExternalLink className="mr-2 h-4 w-4" />
