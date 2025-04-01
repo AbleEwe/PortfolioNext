@@ -58,9 +58,9 @@
         "title": "Todo App",
         "description": "A Todo list App implementing drag an drop, chatGPT and Zustand functionalities."
       },
-      "weatherApp": {
-        "title": "Weather app",
-        "description": "Website that works as weather app created with React, Typescript and an open weather API"
+      "coreySolar": {
+        "title": "Corey Solar",
+        "description": "Developed a custom SHopify store using theme customization, metafields aswell as some liquid code to show details about the products. The store had over 1000 new users register."
       },
       "landingPage": {
         "title": "React Landing page",

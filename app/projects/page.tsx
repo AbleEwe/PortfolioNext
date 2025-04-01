@@ -56,12 +56,11 @@ export default function ProjectsPage() {
       demo: "https://to-do-sm-ds.vercel.app/"
     },
     {
-      title: t('projects.weatherApp.title'),
-      description: t('projects.weatherApp.description'),
-      image: "/weather.webp",
-      technologies: ["React", "CSS3", "Typescript"],
-      github: "https://github.com/AbleEwe/WeatherApp2",
-      demo: "https://weatherappdsm.netlify.app/"
+      title: "Corey Solar",
+      description: t('projects.coreySolar.description'),
+      image: "/coreysolar.png",
+      technologies: ["Shopify", "CSS3", "Liquid"],
+      demo: "https://coreysolar.com/"
     },
     {
       title: t('projects.landingPage.title'),

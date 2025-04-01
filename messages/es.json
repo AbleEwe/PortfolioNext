@@ -58,9 +58,9 @@
         "title": "Aplicación de Tareas",
         "description": "Una aplicación de lista de tareas que implementa arrastrar y soltar, ChatGPT y funcionalidades con Zustand."
       },
-      "weatherApp": {
-        "title": "Aplicación del Clima",
-        "description": "Sitio web que funciona como aplicación del clima creado con React, Typescript y una API de clima abierta."
+      "coreySolar": {
+        "title": "Corey Solar",
+        "description": "Desarrollé una tienda Shopify personalizada con personalización de temas, metacampos y código Liquid para mostrar detalles de los productos. La tienda registró más de 1000 nuevos usuarios."
       },
       "landingPage": {
         "title": "Landing Page en React",
